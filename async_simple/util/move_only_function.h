@@ -123,7 +123,8 @@ public:
                 const Functor& f = _source._m_access<Functor>();
                 return const_cast<Functor*>(std::addressof(f));
             }
-            return _source._m_access<Functor*>();
+            else
+                return _source._m_access<Functor*>();
         }
 
         static void _m_destroy(_any_data& _victim,
